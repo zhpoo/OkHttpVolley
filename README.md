@@ -1,4 +1,4 @@
-## This is easy to request a JSON result from your server.
+## This is a easy way to request a JSON result from your server.
 #### also you can use it to request many other http result by yourself , like upload files.
 
 ## Usage
