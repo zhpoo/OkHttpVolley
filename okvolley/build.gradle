@@ -19,7 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -32,3 +31,18 @@ dependencies {
     compile 'com.android.volley:volley:1.0.0'
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
 }
+
+ext {
+    name = 'OkVolley'
+    desc = 'A android Http library use OkHttp and Volley'
+
+    groupId = 'com.zozx.android'
+//    artifactId = 'okvolley'
+    versionName = '1.0.0'
+
+    websiteUrl = 'https://github.com/zozx/OkHttpVolley'
+    issueTrackerUrl = 'https://github.com/zozx/OkHttpVolley/issues'
+    vcsUrl = 'https://github.com/zozx/OkHttpVolley.git'
+}
+
+apply from: 'https://raw.githubusercontent.com/zozx/release-android-lib-to-jcenter/master/bintray.gradle'

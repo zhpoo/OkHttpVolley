@@ -3,6 +3,10 @@
 
 ## Usage
 
+0.add compile:
+
+    compile 'com.zozx.android:okvolley:1.0.0'
+
 1.First init OkVolley in your application's onCreate() (or other place before you need use it)
 and set some default config.
 

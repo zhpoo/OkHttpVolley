@@ -28,7 +28,7 @@ import okhttp3.ResponseBody;
 
 /**
  * Created by zozx on 16/6/27.
- * An {@link HttpStack} based on {@link OkHttpClient}.
+ * An  HttpStack based on  OkHttpClient.
  */
 @SuppressWarnings("deprecation")
 public class OkHttp3Stack implements HttpStack {

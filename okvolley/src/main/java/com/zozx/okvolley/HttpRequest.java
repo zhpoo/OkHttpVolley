@@ -7,8 +7,6 @@ import java.util.Map;
 /**
  * Created by zozx on 16/6/28.
  * request for wrapping http request.
- *
- * @see {@link RequestWrapper}
  */
 public class HttpRequest {
 
@@ -72,6 +70,9 @@ public class HttpRequest {
 
         /**
          * set request's encoding, default is UTF-8
+         *
+         * @param encoding encoding
+         * @return this builder
          */
         public Builder setEncoding(String encoding) {
             this.paramsEncoding = encoding;
@@ -80,6 +81,10 @@ public class HttpRequest {
 
         /**
          * add a request's header.
+         *
+         * @param key   header key
+         * @param value header value
+         * @return this builder
          */
         public Builder addHeader(String key, String value) {
             this.headers.put(key, value);
@@ -88,6 +93,9 @@ public class HttpRequest {
 
         /**
          * add request's headers
+         *
+         * @param headers headers map.
+         * @return this builder
          */
         public Builder addHeader(Map<String, String> headers) {
             if (headers != null) {
@@ -102,6 +110,7 @@ public class HttpRequest {
          * set http method, default {@link HttpMethod#GET}
          *
          * @param method {@link HttpMethod}
+         * @return this builder
          */
         public Builder setMethod(HttpMethod method) {
             this.method = method;
@@ -128,7 +137,8 @@ public class HttpRequest {
         /**
          * * add request params.
          *
-         * @param params map<string, object>
+         * @param params params map.
+         * @return this builder
          */
         public Builder put(Map<String, Object> params) {
             if (params != null) {
@@ -141,6 +151,9 @@ public class HttpRequest {
 
         /**
          * set request's Content-Type.
+         *
+         * @param contentType content type.
+         * @return this builder
          */
         public Builder setContentType(String contentType) {
             this.contentType = contentType;
@@ -153,6 +166,7 @@ public class HttpRequest {
          * @param initialTimeoutMs  initial timeout milliseconds.
          * @param maxNumRetries     count of retry times.
          * @param backoffMultiplier backoff for each retry.
+         * @return this builder
          */
         public Builder setRetryPolicy(int initialTimeoutMs, int maxNumRetries, float backoffMultiplier) {
             this.retryPolicy = new HttpRetryPolicy(initialTimeoutMs, maxNumRetries, backoffMultiplier);
@@ -161,6 +175,8 @@ public class HttpRequest {
 
         /**
          * create a {@link HttpRequest} instance by this builder.
+         *
+         * @return a http request created by this builder.
          */
         public HttpRequest build() {
             return new HttpRequest(this);

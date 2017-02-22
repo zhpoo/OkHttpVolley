@@ -15,7 +15,7 @@ import java.util.Map.Entry;
 
 /**
  * Created by zozx on 16/6/28.
- * a subclass abstraction {@link Request} which wrapped {@link HttpRequest}
+ * a subclass abstraction  Request which wrapped HttpRequest
  */
 public abstract class RequestWrapper<T> extends Request<T> {
 
